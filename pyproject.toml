@@ -1,0 +1,18 @@
+# python-stubs/pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palpatine-python-stub" # Choose a unique name for pip
+version = "0.1.0"
+description = "Custom global stubs for third-party packages in my venv."
+# You don't usually need dependencies here unless your stubs
+# import types from OTHER stub-only packages.
+
+[tool.setuptools.packages.find]
+where = ["src"] # Location of your source/stub directory
+
+[tool.setuptools.package-data]
+# Ensure the *.pyi and py.typed files are included
+"*" = ["*.pyi", "py.typed"]
